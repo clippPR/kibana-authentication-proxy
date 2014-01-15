@@ -3,18 +3,18 @@ module.exports =  {
     ////////////////////////////////////
     // ElasticSearch Backend Settings
     ////////////////////////////////////
-    "es_host": "localhost",  // The host of Elastic Search
-    "es_port": 9200,  // The port of Elastic Search
-    "es_using_ssl": false,  // If the ES is using SSL(https)?
-    "es_username":  "",  // The basic authentication user of ES server, leave it blank if no basic auth applied
-    "es_password":  "",  // The password of basic authentication of ES server, leave it blank if no basic auth applied.
+    "es_host": process.env.ES_HOST || "localhost",  // The host of Elastic Search
+    "es_port": process.env.ES_PORT || 9200,  // The port of Elastic Search
+    "es_using_ssl": (typeof process.env.ES_SSL === "undefined") ? false : process.env.ES_SSL,  // If the ES is using SSL(https)?
+    "es_username":  process.env.ES_USERNAME || "",  // The basic authentication user of ES server, leave it blank if no basic auth applied
+    "es_password":  process.env.ES_PASSWORD || "",  // The password of basic authentication of ES server, leave it blank if no basic auth applied.
 
 
     ////////////////////////////////////
     // Proxy server configurations
     ////////////////////////////////////
     // Which port listen to
-    "listen_port": 9201,
+    "listen_port": process.env.PORT || 9999,
     // Enable SSL protocol
     "enable_ssl_port": false,
         // The following settings are valid only when enable_ssl_port is true
@@ -38,7 +38,7 @@ module.exports =  {
     ////////////////////////////////////
     // Cookies secret
     // Please change the following secret randomly for security.
-    "cookie_secret": "REPLACE_WITH_A_RANDOM_STRING_PLEASE",
+    "cookie_secret": "lkasdfljasdof ij ofijaskl jflaj9j3029f0j203 029j2j f2ij3f023jf23f23",
 
 
     ////////////////////////////////////
@@ -52,14 +52,14 @@ module.exports =  {
     // Google OAuth2 settings
     // Enable? true or false
     // When set to false, google OAuth will not be applied.
-    "enable_google_oauth": false,
+    "enable_google_oauth": true,
         // We use the following redirect URI:
         // http://YOUR-KIBANA-SITE:[listen_port]/auth/google/callback
         // Please add it in the google developers console first.
         // The client ID of Google OAuth2
-        "client_id": "",
-        "client_secret": "",  // The client secret of Google OAuth2
-        "allowed_emails": ["*"],  // An emails list for the authorized users
+        "client_id": process.env.GOOGLE_CLIENT_ID || "1027027696929-35k8qrsdm5a5c2oh3bumiiuidcgbe89j.apps.googleusercontent.com",
+        "client_secret": process.env.GOOGLE_CLIENT_SECRET || "tcZH0xN3SuXi4jI8wmy__Nek",  // The client secret of Google OAuth2
+        "allowed_emails": ["*@clipppr.com"],  // An emails list for the authorized users
 
 
     // =================================
@@ -71,7 +71,7 @@ module.exports =  {
         // Multiple user/passwd supported
         // The User&Passwd list for basic auth
         "basic_auth_users": [
-            {"user": "demo1", "password": "pwd1"},
+            {"user": "user", "password": "pass"},
             {"user": "demo1", "password": "pwd2"},
         ],
 
