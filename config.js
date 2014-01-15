@@ -57,8 +57,8 @@ module.exports =  {
         // http://YOUR-KIBANA-SITE:[listen_port]/auth/google/callback
         // Please add it in the google developers console first.
         // The client ID of Google OAuth2
-        "client_id": process.env.GOOGLE_CLIENT_ID || "1027027696929-35k8qrsdm5a5c2oh3bumiiuidcgbe89j.apps.googleusercontent.com",
-        "client_secret": process.env.GOOGLE_CLIENT_SECRET || "tcZH0xN3SuXi4jI8wmy__Nek",  // The client secret of Google OAuth2
+        "client_id": process.env.GOOGLE_CLIENT_ID || "",
+        "client_secret": process.env.GOOGLE_CLIENT_SECRET || "",  // The client secret of Google OAuth2
         "allowed_emails": ["*@clipppr.com"],  // An emails list for the authorized users
 
 
