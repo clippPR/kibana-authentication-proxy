@@ -1,5 +1,5 @@
 kibana Authentication Proxy
-============
+============ 
 
 Hosts the latest [kibana3](www.elasticsearch.org/overview/kibana/) and elasticsearch behind Google OAuth2, Basic Authentication or CAS Authentication with NodeJS and Express.
 
