@@ -38,7 +38,7 @@ module.exports =  {
     ////////////////////////////////////
     // Cookies secret
     // Please change the following secret randomly for security.
-    "cookie_secret": "lkasdfljasdof ij ofijaskl jflaj9j3029f0j203 029j2j f2ij3f023jf23f23",
+    "cookie_secret": process.env.COOKIE_SECRET || "lkasdfljasdof ij ofijaskl jflaj9j3029f0j203 029j2j f2ij3f023jf23f23",
 
 
     ////////////////////////////////////
