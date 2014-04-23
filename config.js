@@ -59,7 +59,7 @@ module.exports =  {
         // The client ID of Google OAuth2
         "client_id": process.env.GOOGLE_CLIENT_ID || "",
         "client_secret": process.env.GOOGLE_CLIENT_SECRET || "",  // The client secret of Google OAuth2
-        "allowed_emails": ["*@clipppr.com"],  // An emails list for the authorized users
+        "allowed_emails": ["*@primeloop.com"],  // An emails list for the authorized users
 
 
     // =================================
